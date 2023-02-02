@@ -5,21 +5,21 @@
 class Warden < Formula
   desc "Audit your git repositories based on policy."
   homepage "https://RepoWarden.com"
-  version "0.5.1"
+  version "0.6.0"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/repowarden/cli/releases/download/v0.5.1/warden-v0.5.1-macos-amd64.tar.gz"
-      sha256 "74c16d5e0b4b40ec8db25f79179eba777c554412c9a6ab2ef160e7343e994b61"
+    if Hardware::CPU.arm?
+      url "https://github.com/repowarden/cli/releases/download/v0.6.0/warden-v0.6.0-macos-arm64.tar.gz"
+      sha256 "89a0b1a8d13fd4c7c59cdc3e0e0b50beab9da35aa79f319ab8d0141e0612d8f3"
 
       def install
         bin.install "warden"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/repowarden/cli/releases/download/v0.5.1/warden-v0.5.1-macos-arm64.tar.gz"
-      sha256 "0f069911370f9672454e5dae3cf2de86721dde1e24e2fa45a6266b49389903dc"
+    if Hardware::CPU.intel?
+      url "https://github.com/repowarden/cli/releases/download/v0.6.0/warden-v0.6.0-macos-amd64.tar.gz"
+      sha256 "2b9f636af1ed3c017eaf371c4889f5654e59427a08ca3000356a2f0ce03e2941"
 
       def install
         bin.install "warden"
@@ -29,16 +29,16 @@ class Warden < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/repowarden/cli/releases/download/v0.5.1/warden-v0.5.1-linux-arm64.tar.gz"
-      sha256 "8edfc8af153a411110a1b5af1f98af8559cbf431912e468d1d2a8359dbe7018b"
+      url "https://github.com/repowarden/cli/releases/download/v0.6.0/warden-v0.6.0-linux-arm64.tar.gz"
+      sha256 "d63e03a06aaaeeb3819af8d6473e178d025934c02ddd7867dd6018d71300caf9"
 
       def install
         bin.install "warden"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/repowarden/cli/releases/download/v0.5.1/warden-v0.5.1-linux-amd64.tar.gz"
-      sha256 "faae5e679ae68b5ce3e9d33465c902ccb4be11edbca7f80e5bf685f4abb4d269"
+      url "https://github.com/repowarden/cli/releases/download/v0.6.0/warden-v0.6.0-linux-amd64.tar.gz"
+      sha256 "72aa064d855c5bce71dc1f0fbff96722ef9a6d2c02c72b7d5c8f70e639ea865f"
 
       def install
         bin.install "warden"
