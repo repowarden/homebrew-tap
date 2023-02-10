@@ -5,21 +5,21 @@
 class Warden < Formula
   desc "Audit your git repositories based on policy."
   homepage "https://RepoWarden.com"
-  version "0.10.0"
+  version "0.11.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/repowarden/cli/releases/download/v0.10.0/warden-v0.10.0-macos-arm64.tar.gz"
-      sha256 "e94cadec5404a62aca70df6575b1bc7b0eaeead9b48bd6c2278b9d42cd897312"
+      url "https://github.com/repowarden/cli/releases/download/v0.11.0/warden-v0.11.0-macos-arm64.tar.gz"
+      sha256 "eeeeeb11cc54296365c57335faf4be7e76a0c0c54d07e44cb5c3608a8ea2328c"
 
       def install
         bin.install "warden"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/repowarden/cli/releases/download/v0.10.0/warden-v0.10.0-macos-amd64.tar.gz"
-      sha256 "81ebf4002ea0330fd7b1f669797d262f95a06489a85ca90e97a4bf7d3b5594d8"
+      url "https://github.com/repowarden/cli/releases/download/v0.11.0/warden-v0.11.0-macos-amd64.tar.gz"
+      sha256 "10547eef696e873a114b5e3ff03f0e7cc02384b2526c037c9a93e01ba5103d87"
 
       def install
         bin.install "warden"
@@ -29,16 +29,16 @@ class Warden < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/repowarden/cli/releases/download/v0.10.0/warden-v0.10.0-linux-arm64.tar.gz"
-      sha256 "75deed5b49cebb51891e3dcf66efffedaf1c28eb06bdec301d334a9b9a5efd9b"
+      url "https://github.com/repowarden/cli/releases/download/v0.11.0/warden-v0.11.0-linux-arm64.tar.gz"
+      sha256 "019a1a9b55bc751e1bfc5c2f9becad0f53092cb8aa61618b04ffe45ec3626027"
 
       def install
         bin.install "warden"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/repowarden/cli/releases/download/v0.10.0/warden-v0.10.0-linux-amd64.tar.gz"
-      sha256 "25d575967491918128152712acd1ed9b3175e4fe1b22c11973dab069c002f903"
+      url "https://github.com/repowarden/cli/releases/download/v0.11.0/warden-v0.11.0-linux-amd64.tar.gz"
+      sha256 "8a6dbb9c328b8ea937b4a8631cedfe253d566cc79b6f883ba053be3ef7f46802"
 
       def install
         bin.install "warden"
