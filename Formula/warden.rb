@@ -5,21 +5,21 @@
 class Warden < Formula
   desc "Audit your git repositories based on policy."
   homepage "https://RepoWarden.com"
-  version "0.12.0"
+  version "0.13.0"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/repowarden/cli/releases/download/v0.12.0/warden-v0.12.0-macos-arm64.tar.gz"
-      sha256 "68d21ad3ca46c2b77f467409ca308e525419bef561131b2f0f066f71a569b558"
+    if Hardware::CPU.intel?
+      url "https://github.com/repowarden/cli/releases/download/v0.13.0/warden-v0.13.0-macos-amd64.tar.gz"
+      sha256 "29c29e28bc1b1b67f40263306431a725e106cad32748d8f14184f882bb8b9bf9"
 
       def install
         bin.install "warden"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/repowarden/cli/releases/download/v0.12.0/warden-v0.12.0-macos-amd64.tar.gz"
-      sha256 "fbec44c903d616ad31c94e49a8117075fcfc793d17fe95165673c4fbbe7f1e57"
+    if Hardware::CPU.arm?
+      url "https://github.com/repowarden/cli/releases/download/v0.13.0/warden-v0.13.0-macos-arm64.tar.gz"
+      sha256 "43dcdd574fc5e5e83e59ff964c48a4b51778c4180f2bd12c763ef6f225f391b0"
 
       def install
         bin.install "warden"
@@ -29,16 +29,16 @@ class Warden < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/repowarden/cli/releases/download/v0.12.0/warden-v0.12.0-linux-arm64.tar.gz"
-      sha256 "e96a26233ac3e413582021aad616ecb0d99302f4c88728197acca7249eade475"
+      url "https://github.com/repowarden/cli/releases/download/v0.13.0/warden-v0.13.0-linux-arm64.tar.gz"
+      sha256 "9ae4199d025e5027762f3ca80d22ce63943b186d619df7d94449c0f7c727887f"
 
       def install
         bin.install "warden"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/repowarden/cli/releases/download/v0.12.0/warden-v0.12.0-linux-amd64.tar.gz"
-      sha256 "c8f0e2059ac97bd66132836feab642d757811d28eb0f0b9a584be65cbace81c3"
+      url "https://github.com/repowarden/cli/releases/download/v0.13.0/warden-v0.13.0-linux-amd64.tar.gz"
+      sha256 "dc1c3d828459abbd581f0c724b8f08b8a5803412c5e5a09268182752d7fae5f6"
 
       def install
         bin.install "warden"
