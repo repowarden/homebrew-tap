@@ -5,21 +5,21 @@
 class Warden < Formula
   desc "Audit your git repositories based on policy."
   homepage "https://RepoWarden.com"
-  version "0.13.0"
+  version "0.13.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/repowarden/cli/releases/download/v0.13.0/warden-v0.13.0-macos-amd64.tar.gz"
-      sha256 "29c29e28bc1b1b67f40263306431a725e106cad32748d8f14184f882bb8b9bf9"
+      url "https://github.com/repowarden/cli/releases/download/v0.13.1/warden-v0.13.1-macos-amd64.tar.gz"
+      sha256 "a203ed6e567abae626e5c05fa618345542084b35f06d942d8685a1771a9cafdb"
 
       def install
         bin.install "warden"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/repowarden/cli/releases/download/v0.13.0/warden-v0.13.0-macos-arm64.tar.gz"
-      sha256 "43dcdd574fc5e5e83e59ff964c48a4b51778c4180f2bd12c763ef6f225f391b0"
+      url "https://github.com/repowarden/cli/releases/download/v0.13.1/warden-v0.13.1-macos-arm64.tar.gz"
+      sha256 "c0a73ecc7c707659752607586eea7fd0222f15e0756d5a4cad0dec74ec113341"
 
       def install
         bin.install "warden"
@@ -28,17 +28,17 @@ class Warden < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/repowarden/cli/releases/download/v0.13.0/warden-v0.13.0-linux-arm64.tar.gz"
-      sha256 "9ae4199d025e5027762f3ca80d22ce63943b186d619df7d94449c0f7c727887f"
+    if Hardware::CPU.intel?
+      url "https://github.com/repowarden/cli/releases/download/v0.13.1/warden-v0.13.1-linux-amd64.tar.gz"
+      sha256 "1c99b58cb2d3961d47d69d7b5510c2b4c13dd42f655b5d721b25fb329655bdb2"
 
       def install
         bin.install "warden"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/repowarden/cli/releases/download/v0.13.0/warden-v0.13.0-linux-amd64.tar.gz"
-      sha256 "dc1c3d828459abbd581f0c724b8f08b8a5803412c5e5a09268182752d7fae5f6"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/repowarden/cli/releases/download/v0.13.1/warden-v0.13.1-linux-arm64.tar.gz"
+      sha256 "33e477e4329d946babcf5c9711d69a80650e3dad236fbea04881a7c293a2bb16"
 
       def install
         bin.install "warden"
